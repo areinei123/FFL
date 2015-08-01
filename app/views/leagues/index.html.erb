@@ -1,0 +1,5 @@
+<div class="row">
+  <% @leagues.each do |league| %>
+    <%= league.league_name %>, members: number/<%= league.number_players %>
+  <%-end-%>
+</div>

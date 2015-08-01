@@ -7,4 +7,9 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
+  factory :league do
+    league_name 'Fantasy Football League'
+    number_players 8
+  end
+
 end
