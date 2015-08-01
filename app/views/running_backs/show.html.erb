@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @running_back.player_name %>
+</p>
+
+<p>
+  <strong>Touchdowns:</strong>
+  <%= @running_back.touchdowns %>
+</p>
+
+<p>
+  <strong>Yards:</strong>
+  <%= @running_back.yards %>
+</p>
+
+<p>
+  <strong>Receptions:</strong>
+  <%= @running_back.receptions %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @running_back.week %>
+</p>
+
+<%= link_to 'Edit', edit_running_back_path(@running_back) %> |
+<%= link_to 'Back', running_backs_path %>

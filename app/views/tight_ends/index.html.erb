@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tight Ends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player name</th>
+      <th>Week</th>
+      <th>Touchdowns</th>
+      <th>Yards</th>
+      <th>Receptions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tight_ends.each do |tight_end| %>
+      <tr>
+        <td><%= tight_end.player_name %></td>
+        <td><%= tight_end.week %></td>
+        <td><%= tight_end.touchdowns %></td>
+        <td><%= tight_end.yards %></td>
+        <td><%= tight_end.receptions %></td>
+        <td><%= link_to 'Show', tight_end %></td>
+        <td><%= link_to 'Edit', edit_tight_end_path(tight_end) %></td>
+        <td><%= link_to 'Destroy', tight_end, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tight end', new_tight_end_path %>

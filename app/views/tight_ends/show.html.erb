@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @tight_end.player_name %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @tight_end.week %>
+</p>
+
+<p>
+  <strong>Touchdowns:</strong>
+  <%= @tight_end.touchdowns %>
+</p>
+
+<p>
+  <strong>Yards:</strong>
+  <%= @tight_end.yards %>
+</p>
+
+<p>
+  <strong>Receptions:</strong>
+  <%= @tight_end.receptions %>
+</p>
+
+<%= link_to 'Edit', edit_tight_end_path(@tight_end) %> |
+<%= link_to 'Back', tight_ends_path %>

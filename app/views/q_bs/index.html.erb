@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Qbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player name</th>
+      <th>Week</th>
+      <th>Pass attempts</th>
+      <th>Pass completes</th>
+      <th>Touchdowns</th>
+      <th>Interceptions</th>
+      <th>Fumbles</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qbs.each do |qb| %>
+      <tr>
+        <td><%= qb.player_name %></td>
+        <td><%= qb.week %></td>
+        <td><%= qb.pass_attempts %></td>
+        <td><%= qb.pass_completes %></td>
+        <td><%= qb.touchdowns %></td>
+        <td><%= qb.interceptions %></td>
+        <td><%= qb.fumbles %></td>
+        <td><%= link_to 'Show', qb %></td>
+        <td><%= link_to 'Edit', edit_qb_path(qb) %></td>
+        <td><%= link_to 'Destroy', qb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qb', new_qb_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @wide_receiver.player_name %>
+</p>
+
+<p>
+  <strong>Touchdowns:</strong>
+  <%= @wide_receiver.touchdowns %>
+</p>
+
+<p>
+  <strong>Yards:</strong>
+  <%= @wide_receiver.yards %>
+</p>
+
+<p>
+  <strong>Receptions:</strong>
+  <%= @wide_receiver.receptions %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @wide_receiver.week %>
+</p>
+
+<%= link_to 'Edit', edit_wide_receiver_path(@wide_receiver) %> |
+<%= link_to 'Back', wide_receivers_path %>

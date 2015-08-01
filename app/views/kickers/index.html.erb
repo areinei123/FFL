@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Kickers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player name</th>
+      <th>Week</th>
+      <th>Kicks made</th>
+      <th>Kicks attempted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kickers.each do |kicker| %>
+      <tr>
+        <td><%= kicker.player_name %></td>
+        <td><%= kicker.week %></td>
+        <td><%= kicker.kicks_made %></td>
+        <td><%= kicker.kicks_attempted %></td>
+        <td><%= link_to 'Show', kicker %></td>
+        <td><%= link_to 'Edit', edit_kicker_path(kicker) %></td>
+        <td><%= link_to 'Destroy', kicker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kicker', new_kicker_path %>

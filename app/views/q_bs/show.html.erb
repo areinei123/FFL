@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @qb.player_name %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @qb.week %>
+</p>
+
+<p>
+  <strong>Pass attempts:</strong>
+  <%= @qb.pass_attempts %>
+</p>
+
+<p>
+  <strong>Pass completes:</strong>
+  <%= @qb.pass_completes %>
+</p>
+
+<p>
+  <strong>Touchdowns:</strong>
+  <%= @qb.touchdowns %>
+</p>
+
+<p>
+  <strong>Interceptions:</strong>
+  <%= @qb.interceptions %>
+</p>
+
+<p>
+  <strong>Fumbles:</strong>
+  <%= @qb.fumbles %>
+</p>
+
+<%= link_to 'Edit', edit_qb_path(@qb) %> |
+<%= link_to 'Back', qbs_path %>

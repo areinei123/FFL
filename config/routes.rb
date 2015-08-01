@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
+  resources :kickers
+  resources :defenses
+  resources :wide_receivers
+  resources :tight_ends
+  resources :running_backs
   root 'homes#index'
   devise_for :users
 
-  resources :leagues
+  resources :leagues do
+    resources :teams
+  end
+    
+  resources :teams do  
+    resources :qbs
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
