@@ -1,0 +1,101 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team_name %><br>
+    <%= f.text_field :team_name %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.number_field :week %>
+  </div>
+  <div class="field">
+    <%= f.label :qb_total_yards %><br>
+    <%= f.number_field :qb_total_yards %>
+  </div>
+  <div class="field">
+    <%= f.label :qb_total_completes %><br>
+    <%= f.number_field :qb_total_completes %>
+  </div>
+  <div class="field">
+    <%= f.label :qb_total_attempts %><br>
+    <%= f.number_field :qb_total_attempts %>
+  </div>
+  <div class="field">
+    <%= f.label :qb_total_touchdowns %><br>
+    <%= f.number_field :qb_total_touchdowns %>
+  </div>
+  <div class="field">
+    <%= f.label :qb_total_fumbles %><br>
+    <%= f.number_field :qb_total_fumbles %>
+  </div>
+  <div class="field">
+    <%= f.label :qb_total_interceptions %><br>
+    <%= f.number_field :qb_total_interceptions %>
+  </div>
+  <div class="field">
+    <%= f.label :rb_total_yards %><br>
+    <%= f.number_field :rb_total_yards %>
+  </div>
+  <div class="field">
+    <%= f.label :rb_total_receptions %><br>
+    <%= f.number_field :rb_total_receptions %>
+  </div>
+  <div class="field">
+    <%= f.label :rb_total_touchdowns %><br>
+    <%= f.number_field :rb_total_touchdowns %>
+  </div>
+  <div class="field">
+    <%= f.label :wr_total_yards %><br>
+    <%= f.number_field :wr_total_yards %>
+  </div>
+  <div class="field">
+    <%= f.label :wr_total_receptions %><br>
+    <%= f.number_field :wr_total_receptions %>
+  </div>
+  <div class="field">
+    <%= f.label :wr_total_touchdowns %><br>
+    <%= f.number_field :wr_total_touchdowns %>
+  </div>
+  <div class="field">
+    <%= f.label :te_total_yards %><br>
+    <%= f.number_field :te_total_yards %>
+  </div>
+  <div class="field">
+    <%= f.label :te_total_receptions %><br>
+    <%= f.number_field :te_total_receptions %>
+  </div>
+  <div class="field">
+    <%= f.label :te_total_touchdowns %><br>
+    <%= f.number_field :te_total_touchdowns %>
+  </div>
+  <div class="field">
+    <%= f.label :kicker_total_points %><br>
+    <%= f.number_field :kicker_total_points %>
+  </div>
+  <div class="field">
+    <%= f.label :def_total_sacks %><br>
+    <%= f.number_field :def_total_sacks %>
+  </div>
+  <div class="field">
+    <%= f.label :def_total_tackles %><br>
+    <%= f.number_field :def_total_tackles %>
+  </div>
+  <div class="field">
+    <%= f.label :def_total_interceptions %><br>
+    <%= f.number_field :def_total_interceptions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

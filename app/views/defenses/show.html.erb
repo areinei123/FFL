@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @defense.player_name %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @defense.week %>
+</p>
+
+<p>
+  <strong>Tackles:</strong>
+  <%= @defense.tackles %>
+</p>
+
+<%= link_to 'Edit', edit_defense_path(@defense) %> |
+<%= link_to 'Back', defenses_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@running_back) do |f| %>
+  <% if @running_back.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@running_back.errors.count, "error") %> prohibited this running_back from being saved:</h2>
+
+      <ul>
+      <% @running_back.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_name %><br>
+    <%= f.text_field :player_name %>
+  </div>
+  <div class="field">
+    <%= f.label :touchdowns %><br>
+    <%= f.number_field :touchdowns %>
+  </div>
+  <div class="field">
+    <%= f.label :yards %><br>
+    <%= f.number_field :yards %>
+  </div>
+  <div class="field">
+    <%= f.label :receptions %><br>
+    <%= f.number_field :receptions %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.number_field :week %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

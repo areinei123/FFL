@@ -1,0 +1,33 @@
+<%= form_for(@kicker) do |f| %>
+  <% if @kicker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kicker.errors.count, "error") %> prohibited this kicker from being saved:</h2>
+
+      <ul>
+      <% @kicker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_name %><br>
+    <%= f.text_field :player_name %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.number_field :week %>
+  </div>
+  <div class="field">
+    <%= f.label :kicks_made %><br>
+    <%= f.number_field :kicks_made %>
+  </div>
+  <div class="field">
+    <%= f.label :kicks_attempted %><br>
+    <%= f.number_field :kicks_attempted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

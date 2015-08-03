@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team name</th>
+      <th>Week</th>
+      <th>Qb total yards</th>
+      <th>Qb total completes</th>
+      <th>Qb total attempts</th>
+      <th>Qb total touchdowns</th>
+      <th>Qb total fumbles</th>
+      <th>Qb total interceptions</th>
+      <th>Rb total yards</th>
+      <th>Rb total receptions</th>
+      <th>Rb total touchdowns</th>
+      <th>Wr total yards</th>
+      <th>Wr total receptions</th>
+      <th>Wr total touchdowns</th>
+      <th>Te total yards</th>
+      <th>Te total receptions</th>
+      <th>Te total touchdowns</th>
+      <th>Kicker total points</th>
+      <th>Def total sacks</th>
+      <th>Def total tackles</th>
+      <th>Def total interceptions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.team_name %></td>
+        <td><%= team.week %></td>
+        <td><%= team.qb_total_yards %></td>
+        <td><%= team.qb_total_completes %></td>
+        <td><%= team.qb_total_attempts %></td>
+        <td><%= team.qb_total_touchdowns %></td>
+        <td><%= team.qb_total_fumbles %></td>
+        <td><%= team.qb_total_interceptions %></td>
+        <td><%= team.rb_total_yards %></td>
+        <td><%= team.rb_total_receptions %></td>
+        <td><%= team.rb_total_touchdowns %></td>
+        <td><%= team.wr_total_yards %></td>
+        <td><%= team.wr_total_receptions %></td>
+        <td><%= team.wr_total_touchdowns %></td>
+        <td><%= team.te_total_yards %></td>
+        <td><%= team.te_total_receptions %></td>
+        <td><%= team.te_total_touchdowns %></td>
+        <td><%= team.kicker_total_points %></td>
+        <td><%= team.def_total_sacks %></td>
+        <td><%= team.def_total_tackles %></td>
+        <td><%= team.def_total_interceptions %></td>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team', new_team_path %>

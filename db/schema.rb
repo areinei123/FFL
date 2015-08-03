@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801154522) do
+ActiveRecord::Schema.define(version: 20150801172113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,34 @@ ActiveRecord::Schema.define(version: 20150801154522) do
   create_table "leagues", force: :cascade do |t|
     t.string  "league_name",    null: false
     t.integer "number_players", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "team_name"
+    t.integer  "week"
+    t.integer  "qb_total_yards"
+    t.integer  "qb_total_completes"
+    t.integer  "qb_total_attempts"
+    t.integer  "qb_total_touchdowns"
+    t.integer  "qb_total_fumbles"
+    t.integer  "qb_total_interceptions"
+    t.integer  "rb_total_yards"
+    t.integer  "rb_total_receptions"
+    t.integer  "rb_total_touchdowns"
+    t.integer  "wr_total_yards"
+    t.integer  "wr_total_receptions"
+    t.integer  "wr_total_touchdowns"
+    t.integer  "te_total_yards"
+    t.integer  "te_total_receptions"
+    t.integer  "te_total_touchdowns"
+    t.integer  "kicker_total_points"
+    t.integer  "def_total_sacks"
+    t.integer  "def_total_tackles"
+    t.integer  "def_total_interceptions"
+    t.integer  "user_id"
+    t.integer  "league_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|

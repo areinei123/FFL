@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wide Receivers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player name</th>
+      <th>Touchdowns</th>
+      <th>Yards</th>
+      <th>Receptions</th>
+      <th>Week</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wide_receivers.each do |wide_receiver| %>
+      <tr>
+        <td><%= wide_receiver.player_name %></td>
+        <td><%= wide_receiver.touchdowns %></td>
+        <td><%= wide_receiver.yards %></td>
+        <td><%= wide_receiver.receptions %></td>
+        <td><%= wide_receiver.week %></td>
+        <td><%= link_to 'Show', wide_receiver %></td>
+        <td><%= link_to 'Edit', edit_wide_receiver_path(wide_receiver) %></td>
+        <td><%= link_to 'Destroy', wide_receiver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wide receiver', new_wide_receiver_path %>
